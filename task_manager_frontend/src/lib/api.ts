@@ -54,7 +54,11 @@ export type TaskUpdateInput = Partial<TaskCreateInput> & {
 
 function getApiBaseUrl(): string {
   const base = process.env.NEXT_PUBLIC_API_BASE_URL;
-  if (!base) return "";
+
+  // In preview/static-export environments, NEXT_PUBLIC_* may not be injected.
+  // Fall back to same-origin API proxy route.
+  if (!base) return "/api";
+
   return base.replace(/\/+$/, "");
 }
 
@@ -80,7 +84,7 @@ async function request<T>(
   const base = getApiBaseUrl();
   if (!base) {
     throw new ApiError(
-      "Missing NEXT_PUBLIC_API_BASE_URL. Set it in your environment.",
+      "API base URL not configured. Set BACKEND_URL (proxy) or NEXT_PUBLIC_API_BASE_URL.",
       0
     );
   }
