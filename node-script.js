@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-console.log("Node script executed successfully.");
+console.log("hi welcome");
