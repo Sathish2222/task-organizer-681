@@ -11,7 +11,7 @@ export default function HomePage() {
           borderBottom: "1px solid #e5e7eb",
           padding: "16px 20px",
           position: "sticky",
-          top: 0
+          top: 20
         }}
       >
         <div style={{ maxWidth: 960, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
