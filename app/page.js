@@ -25,7 +25,7 @@ export default function HomePage() {
       <section style={{ maxWidth: 960, margin: "0 auto", padding: 20 }}>
         <h1 style={{ fontSize: 24, margin: "16px 0" }}>Frontend running from repo root</h1>
         <p style={{ margin: "0 0 16px 0", color: "#475569" }}>
-          This is a minimal Next.js app scaffold created because the previous <code>task_manager_frontend/</code> folder only contained environment variables.
+          This is a minimal Next.js app scaffold running from the repository root.
         </p>
 
         <div style={{ background: "#fff", border: "1px solid #e5e7eb", borderRadius: 12, padding: 16 }}>
